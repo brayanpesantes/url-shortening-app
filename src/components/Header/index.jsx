@@ -1,6 +1,7 @@
-import { Button, HStack, Image, Link } from '@chakra-ui/react'
+import { Button, HStack, IconButton, Image, Link } from '@chakra-ui/react'
 import React from 'react'
 import logo from '../../../public/images/logo.svg'
+import { GiHamburgerMenu } from 'react-icons/gi'
 function Header() {
   return (
     <HStack
@@ -12,14 +13,14 @@ function Header() {
     >
       <HStack gap={8} >
         <Image src={logo} alt="logo" />
-        <HStack gap={5}>
+        <HStack gap={5} display={{ base: 'none', md: "block" }}>
           <Link href="/" color={"neutral.300"} fontWeight={"700"}>Features</Link>
           <Link href="/" color={"neutral.300"} fontWeight={"700"}>Pricing</Link>
           <Link href="/" color={"neutral.300"} fontWeight={"700"}>Recourse</Link>
         </HStack>
       </HStack>
 
-      <HStack>
+      <HStack display={{ base: "none", md: "block " }}>
         <Button
           variant={"ghost"}
           color={"neutral.300"}
@@ -32,6 +33,14 @@ function Header() {
           borderRadius={30}
         >Sign Up</Button>
       </HStack>
+      <IconButton
+        aria-label='icon hamburger'
+        icon={<GiHamburgerMenu />}
+        variant="ghost"
+        color={"neutral.300"}
+        size='lg'
+        display={['block', 'none']}
+      />
     </HStack >
   )
 }
