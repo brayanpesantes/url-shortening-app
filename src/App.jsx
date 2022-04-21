@@ -6,6 +6,8 @@ import FromRecordLink from './components/FromRecordLink'
 import ListLinkItem from './components/ListLinkItem'
 import { AnimatePresence } from 'framer-motion'
 import ListAdvance from './components/ListAdvance'
+import SectionStared from './components/SectionStared'
+import Footer from './components/Footer'
 
 
 function App() {
@@ -35,6 +37,9 @@ function App() {
         <Box p={14} />
         <ListLinkItem />
         <ListAdvance />
+        <SectionStared />
+        <Footer />
+
         {/* <Text> */}
 
 
@@ -47,24 +52,16 @@ function App() {
 
           
 
-          Brand Recognition
 
-          Boost your brand recognition with each click. Generic links don’t
-          mean a thing. Branded links help instil confidence in your content.
+         
 
-          Detailed Records
+          
 
-          Gain insights into who is clicking your links. Knowing when and where
-          people engage with your content helps inform better decisions.
+          
 
-          Fully Customizable
+        
 
-          Improve brand awareness and content discoverability through customizable
-          links, supercharging audience engagement.
-
-          Boost your links today
-
-          Get Started
+  
 
           Features
 
