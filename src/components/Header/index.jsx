@@ -35,11 +35,11 @@ function Header() {
       </HStack>
       <IconButton
         aria-label='icon hamburger'
-        icon={<GiHamburgerMenu />}
+        icon={<GiHamburgerMenu size={30} />}
         variant="ghost"
         color={"neutral.300"}
         size='lg'
-        display={['block', 'none']}
+        display={['flex', 'none']}
       />
     </HStack >
   )
