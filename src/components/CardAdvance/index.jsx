@@ -1,15 +1,17 @@
 import { Box, Heading, Icon, Image, Text } from '@chakra-ui/react'
 import React from 'react'
 
-function CardAdvance({ image, title, text }) {
+function CardAdvance({ image, title, text, ...res }) {
   return (
     <Box
+
       pos="relative"
       bg="white"
       borderRadius="md"
       textAlign={"center"}
       position="relative"
       p={8}
+      h={"fit-content"}
       className="borderChild"
     >
       <Box

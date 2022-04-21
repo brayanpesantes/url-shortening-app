@@ -4,12 +4,12 @@ import ImageHero from '../../../public/images/illustration-working.svg'
 
 function Hero() {
   return (
-    <Stack spacing={8}>
+    <Stack spacing={8} direction={{ base: 'column', lg: "row-reverse" }} w="full">
       <Box
-        flexBasis={"100%"}
+        flexBasis={{ base: "100%", lg: '50%' }}
         pos="relative"
       >
-        <Box pos={"relative"} height={300} >
+        <Box pos={"relative"} height={{ base: 300, lg: "450px" }} >
           <Image
             src={ImageHero}
             pos={"absolute"}
@@ -17,19 +17,20 @@ function Hero() {
             objectPosition={"left"}
             height={"full"}
             w="full"
-            right={-3} />
+            right={{ base: -3, lg: -24 }} />
         </Box>
       </Box>
 
-      <Box flexBasis={"100%"}>
+      <Box flexBasis={{ base: "100%", lg: "50%" }}>
         <VStack
-          w="90%"
+          w={{ base: "90%", lg: "70% " }}
           marginX={"auto"}
           spacing={4}
+
         >
           <Heading
             textAlign={"center"}
-            fontSize={"4xl"}
+            fontSize={{ base: "4xl", lg: "6xl" }}
             fontWeight={700}
             color="neutral.500"
           >

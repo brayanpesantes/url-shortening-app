@@ -7,15 +7,23 @@ import DetailedRecords from '../../../public/images/icon-detailed-records.svg'
 import FullyCustomizable from '../../../public/images/icon-fully-customizable.svg'
 function ListAdvance() {
   return (
-    <Box py={16} w="90%">
+    <Box py={16} w="90%" >
       <SectionAdvance />
-      <Stack spacing={20} mt={14} w="100%" direction={{ base: 'column', lg: "row" }} >
+      <Stack
+        spacing={10}
+        mt={14}
+        w="100%"
+        direction={{ base: 'column', lg: "row" }}
+
+        height={{ sm: "auto", md: "400px" }}
+      >
         <CardAdvance
           image={BrandRecognition}
           title="Brand Recognition"
           text="Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content."
         />
         <CardAdvance
+
           image={DetailedRecords}
           title="Detailed Records"
           text="Gain insights into who is clicking your links. Knowing when and where

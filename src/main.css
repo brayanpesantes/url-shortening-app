@@ -9,7 +9,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .borderChild:nth-last-child(n+2)::before {
+    .borderChild:nth-child(1)::before {
         content: ' ';
         position: absolute;
         width: 5rem;
@@ -17,5 +17,20 @@
         right: -5rem;
         top: 50%;
         background: hsl(180, 66%, 49%);
+    }
+    .borderChild:nth-child(2)::before {
+        content: ' ';
+        position: absolute;
+        width: 5rem;
+        height: 5px;
+        right: -5rem;
+        top: 50%;
+        background: hsl(180, 66%, 49%);
+    }
+    .borderChild:nth-child(2) {
+        margin-top: 50px;
+    }
+    .borderChild:nth-child(3) {
+        margin-top: 100px;
     }
 }
