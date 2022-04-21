@@ -9,12 +9,16 @@ function SectionStared() {
       height={300}
       justifyContent={"center"}
       spacing={4}
+      backgroundImage={{ base: "../../../public/images/bg-boost-mobile.svg", md: "../../../public/images/bg-boost-desktop.svg" }}
+      backgroundRepeat="no-repeat"
+      backgroundSize={"cover"}
     >
       <Heading
         color={"white"}
         w="90%"
         mx={"auto"}
-        fontSize={"4xl"}>
+        textAlign="center"
+        fontSize={{ base: "2xl", sm: '3xl', md: '4xl' }}>
         Boost your links today
       </Heading>
       <Button

@@ -18,13 +18,14 @@ function CardAdvance({ image, title, text }) {
         borderRadius={"full"}
         padding={4}
         top={-8}
-        left={"40%"}
+        left={["38%", "45%"]}
       >
         <Image
           src={image}
           display="block"
+
           w={"full"}
-          h="full"
+          h={"full"}
           objectFit={"cover"} />
       </Box>
       <Heading
