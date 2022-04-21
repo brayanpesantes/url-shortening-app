@@ -1,25 +1,42 @@
-import { Button, Flex, HStack, Text } from '@chakra-ui/react'
+import { Box, Button, Divider, Flex, HStack, Stack, Text } from '@chakra-ui/react'
 
 function LinkItem() {
   return (
     <Flex
       w={"100%"}
-      //  mt={32} 
       bg="neutral.50">
-      <HStack
+      <Box
+        display={"flex"}
+        gap={2}
         w={"100%"}
-        justifyContent={"space-between"}
+        flexDirection={['column', "row"]}
+        justifyContent={["start", "space-between"]}
+
       >
-        <Text>Lorem, ipsum dolor.</Text>
-        <HStack>
-          <Text>
+        <Text
+          textAlign={"start"}
+          w={["90%", "50%"]}
+        >
+          Lorem, ipsum dolor.
+        </Text>
+        <Divider bg={"neutral.300"} display={['block', 'none']} />
+        <Box
+          display={"flex"}
+          gap={2}
+          w={["90%", "auto"]}
+          flexDirection={["column", "row"]}
+        >
+          <Text
+            w={["100%", 'auto']}
+            textAlign={["start", "auto"]}
+          >
             Lorem, ipsum dolor.
           </Text>
-          <Button bg={"primary.100"} color={"white"}>
+          <Button bg={"primary.100"} color={"white"} w={["100%", "auto"]}>
             Copy
           </Button>
-        </HStack>
-      </HStack>
+        </Box>
+      </Box>
     </Flex>
   )
 }
