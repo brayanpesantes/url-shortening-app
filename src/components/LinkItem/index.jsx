@@ -4,20 +4,24 @@ function LinkItem() {
   return (
     <Flex
       w={"100%"}
-      bg="neutral.50">
-      <Box
-        display={"flex"}
-        gap={2}
-        w={"100%"}
-        flexDirection={['column', "row"]}
-        justifyContent={["start", "space-between"]}
-
+      bg="white"
+      py={3}
+      borderRadius={"lg"}>
+      <Stack
+        direction={"column"}
+        spacing={1}
+        w={"90%"}
+        margin="auto"
       >
         <Text
           textAlign={"start"}
-          w={["90%", "50%"]}
+          w={"90%"}
+          color="neutral.500"
+          fontWeight={"500"}
+          px={4}
+          py={2}
         >
-          Lorem, ipsum dolor.
+          https://frontendmentor.io
         </Text>
         <Divider bg={"neutral.300"} display={['block', 'none']} />
         <Box
@@ -27,17 +31,21 @@ function LinkItem() {
           flexDirection={["column", "row"]}
         >
           <Text
-            w={["100%", 'auto']}
-            textAlign={["start", "auto"]}
+            textAlign={"start"}
+            w={"90%"}
+            color="primary.100"
+            fontWeight={"500"}
+            px={4}
+            py={1}
           >
-            Lorem, ipsum dolor.
+            https://frontendment
           </Text>
           <Button bg={"primary.100"} color={"white"} w={["100%", "auto"]}>
             Copy
           </Button>
         </Box>
-      </Box>
-    </Flex>
+      </Stack>
+    </Flex >
   )
 }
 
