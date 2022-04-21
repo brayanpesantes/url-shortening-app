@@ -7,3 +7,15 @@
     left: center;
     background: hsl(180, 66%, 49%);
 }
+
+@media screen and (min-width: 1024px) {
+    .borderChild:nth-last-child(n+2)::before {
+        content: ' ';
+        position: absolute;
+        width: 5rem;
+        height: 5px;
+        right: -5rem;
+        top: 50%;
+        background: hsl(180, 66%, 49%);
+    }
+}

@@ -9,7 +9,7 @@ function ListAdvance() {
   return (
     <Box py={16} w="90%">
       <SectionAdvance />
-      <Stack spacing={20} mt={14} w="100%" >
+      <Stack spacing={20} mt={14} w="100%" direction={{ base: 'column', lg: "row" }} >
         <CardAdvance
           image={BrandRecognition}
           title="Brand Recognition"
@@ -29,7 +29,7 @@ function ListAdvance() {
         />
       </Stack>
 
-    </Box>
+    </Box >
   )
 }
 
