@@ -8,7 +8,7 @@ function App() {
   return (
     <Box w="100vw" minH={["100vh"]}>
       <Box
-        bg={"red"}
+        bg={"neutral.50"}
         position="relative"
         padding={0}
         margin={0}

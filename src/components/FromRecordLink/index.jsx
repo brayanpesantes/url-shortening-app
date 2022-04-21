@@ -11,14 +11,16 @@ function FromRecordLink() {
       alignItems="center"
 
     >
-      <HStack w={"80%"}
-        padding={12}
+      <HStack w={['90%', "80%"]}
+        padding={[4, 12]}
         bgColor="neutral.400"
         bgImage={`url(${BgImage})`}
         bgRepeat="no-repeat"
         bgSize="cover"
         alignContent={'center'}
         borderRadius={10}
+        gap={[4, 0]}
+        flexDirection={['column', 'row']}
       >
         <Input
           placeholder='Shorten a link here...'
@@ -30,6 +32,7 @@ function FromRecordLink() {
           color={"white"}
           height={14}
           px={8}
+          width={['100%', 'auto']}
         >
           Shorten It!
         </Button>
