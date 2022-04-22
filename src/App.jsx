@@ -1,4 +1,4 @@
-import { Box, Button, Divider, Flex, HStack, Link, Stack, useBoolean, VStack } from '@chakra-ui/react'
+import { Box, Button, Divider, Link, Stack, useBoolean, VStack } from '@chakra-ui/react'
 import Header from './components/Header'
 import ResponsiveHeader from './components/Header/ResponsiveHeader'
 import Hero from './components/Hero'
@@ -8,11 +8,22 @@ import { AnimatePresence } from 'framer-motion'
 import ListAdvance from './components/ListAdvance'
 import SectionStared from './components/SectionStared'
 import Footer from './components/Footer'
+import { useEffect, useState } from 'react'
 
 
 function App() {
 
+  const [listLinks, setListLinks] = useState(localStorage.getItem('data') ? JSON.parse(localStorage.getItem('data')) : [])
+
   const [isOpen, setIsOpen] = useBoolean()
+
+  useEffect(() => {
+    const data = localStorage.getItem('data')
+    if (data) {
+      setListLinks(JSON.parse(data))
+    }
+  }, [])
+
   return (
 
     <VStack
@@ -25,34 +36,19 @@ function App() {
     >
       <VStack pos={"relative"} bg="neutral.50" w="full">
         <Header setIsOpen={setIsOpen.toggle} isOpen={isOpen} />
-
         < AnimatePresence exitBeforeEnter>
           {isOpen && <ResponsiveHeader />}
         </AnimatePresence>
         <Hero />
-        <FromRecordLink />
+        <FromRecordLink setListLinks={setListLinks} listLinks={listLinks} />
         <Box p={14} />
       </VStack>
       <VStack bg={"neutral.100"} spacing={0} w="full">
         <Box p={14} />
-        <ListLinkItem />
+        <ListLinkItem listLinks={listLinks} />
         <ListAdvance />
         <SectionStared />
         <Footer />
-
-        {/* <Text> */}
-
-
-
-        {/* 
-
-
-        
-
-         
-
-          
-          Contact</Text> */}
       </VStack>
     </VStack >
 

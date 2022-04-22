@@ -1,6 +1,13 @@
 import { Box, Button, Divider, Flex, HStack, Stack, Text } from '@chakra-ui/react'
+import { useState } from 'react'
 
-function LinkItem() {
+function LinkItem({ original_url, short_url }) {
+  const [isCopy, setIsCopy] = useState(false)
+  const copyToClipboard = () => {
+    setIsCopy(false)
+    navigator.clipboard.writeText(short_url)
+    setIsCopy(true)
+  }
   return (
     <Flex
       w={"100%"}
@@ -21,7 +28,7 @@ function LinkItem() {
           px={4}
           py={2}
         >
-          https://frontendmentor.io
+          {original_url}
         </Text>
         <Divider bg={"neutral.300"} display={['block', 'none']} />
         <Box
@@ -38,10 +45,12 @@ function LinkItem() {
             px={4}
             py={1}
           >
-            https://frontendment
+            {short_url}
           </Text>
-          <Button bg={"primary.100"} color={"white"} w={["100%", "auto"]}>
-            Copy
+          <Button _hover={{ opacity: .5 }} bg={isCopy ? 'primary.200' : "primary.100"} color={"white"} w={["100%", "auto"]} onClick={copyToClipboard}>
+            {
+              isCopy ? 'Copied!' : 'Copy'
+            }
           </Button>
         </Box>
       </Stack>
